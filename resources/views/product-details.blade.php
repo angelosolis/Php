@@ -1,5 +1,6 @@
-@include('templates.header')
 
+@include('templates.header')
+<a href="/edit-product/{{$product->id}}">Edit Product </a>
             <h3>Product Name: {{ $product->product_name }}</h3>
             <h3>Description: {{ $product->description }}</h3>
             <h3>Quantity: {{ $product->quantity }}</h3>

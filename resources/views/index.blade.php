@@ -1,10 +1,13 @@
-  @include('templates.header')
 
-    <x-navbar />
 
-    <h2> All Products </h2>
+@include('templates.header')
+
+@if(session('success'))
+    <div class="alert alert-success">
+        {{session('success')}}
+    </div>
+    @endif
+<a href="/add-product" class="btn btn-primary">Add Product</a>
+
     <x-products :products="$products"/>
-    <h2> All Users </h2>
-    <x-users :users="$users"/>
-
     @include('templates.footer')
